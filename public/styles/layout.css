@@ -282,3 +282,9 @@ footer .wave#wave4 {
     background-position-x: 1000px;
   }
 }
+
+
+a {
+  text-decoration: none;
+  color: white;
+}
