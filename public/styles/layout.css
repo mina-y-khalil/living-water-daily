@@ -288,3 +288,46 @@ a {
   text-decoration: none;
   color: white;
 }
+
+/* 1) Full-bleed section so the grid spans the page */
+.feelings-section {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 24px 24px 220px; /* extra bottom space before the waves */
+  border-radius: 15px;
+}
+
+/* 2) Make sure no parent keeps it narrow */
+.feelings-section, .feelings {
+  max-width: none !important;
+}
+
+/* 3) Responsive grid across the full width */
+.feelings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  width: 100%;
+
+}
+
+/* 4) Keep footer behind content so overlap can’t cover buttons */
+footer { z-index: 1; }
+
+.feelings button {
+  /* padding: 12px; */
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.feelings button:hover {
+  background-color: #f4eb9c; /* light yellow */
+}
