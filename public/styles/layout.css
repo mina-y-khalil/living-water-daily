@@ -331,3 +331,8 @@ footer { z-index: 1; }
 .feelings button:hover {
   background-color: #f4eb9c; /* light yellow */
 }
+
+#donate {
+  background-color: #080075; /* light red */
+  border-radius: 15px;
+}
