@@ -218,7 +218,7 @@ footer .menu li a:hover {
 p {
   color: whtie;
   text-align: center;
-  margin-top: 15px;
+  /* margin-top: 15px; */
   margin-bottom: 10px;
   font-size: 1.1em;
 }
@@ -329,7 +329,8 @@ footer { z-index: 1; }
 }
 
 .feelings button:hover {
-  background-color: #f9e595; /* light yellow */
+  background-color: #fff6cc !important;  /* light yellow hover */
+  border-color: #f1d27a;
 }
 
 #donate {
@@ -339,5 +340,47 @@ footer { z-index: 1; }
 
 #all{
   background-color: #f9e595; /* light red */
+  border-radius: 15px;
+}
+
+/* Make forms invisible to the grid layout */
+.feelings form { display: contents; }
+
+/* Reset and style the feeling buttons explicitly */
+.feelings button {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid #d6e4ff;
+  background: #ffffff !important;
+  color: #1f2937;
+  padding: 6px 14px;        /* smaller height */
+  border-radius: 8px;
+  font-size: 13px;          /* slightly smaller font */
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+  transition: background-color .2s ease, border-color .2s ease, transform .02s ease;
+}
+
+
+.feelings button:hover {
+  background-color: #fff6cc !important;  /* light yellow hover */
+  border-color: #f1d27a;
+}
+
+.feelings button:active {
+  transform: translateY(1px);
+}
+
+/* Optional: special styles you had */
+#all {
+  background-color: #f9e595 !important;
+  border-radius: 15px;
+}
+
+#donate {
+  background-color: #080075 !important;
+  color: #fff;
   border-radius: 15px;
 }
