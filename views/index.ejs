@@ -5,7 +5,7 @@
 
   <div class="verse-area">
     <div class="verse-inner">
-      <% if (typeof verse !== 'undefined' && verse) { %>
+      <% if (locals.verse) { %>
         <p class="verse-text" title="<%= verse.text %>"><%= verse.text %></p>
         <p class="verse-ref"><%= verse.ref %></p>
       <% } else { %>
