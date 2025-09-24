@@ -3,14 +3,19 @@
 
   <!-- <h1>Home Page</h1> -->
 
-  <% if (verse) { %>
-    <div class="verse-box">
-      <p><%= verse.text %></p>
-      <p><strong><%= verse.ref %></strong></p>
+  <div class="verse-area">
+    <div class="verse-inner">
+      <% if (typeof verse !== 'undefined' && verse) { %>
+        <p class="verse-text" title="<%= verse.text %>"><%= verse.text %></p>
+        <p class="verse-ref"><%= verse.ref %></p>
+      <% } else { %>
+        <p class="verse-text">Choose how you feel and receive a verse from the Bible.</p>
+        <p class="verse-ref">Living Water Daily</p>
+      <% } %>
     </div>
-  <% } else { %>
-    <p>Welcome to Living Water Daily — a place where God’s Word meets your heart. Choose how you feel, and receive a verse from the Bible to guide, strengthen, and uplift you today.</p>
-  <% } %>
+  </div>
+  
+  
   
 <div class="feelings" role="group" aria-label="Choose a feeling">
   <form action="/verse" method="GET"><button id="joy" data-feeling="joy" type="submit" name="feeling" value="joy">Joy</button></form>
