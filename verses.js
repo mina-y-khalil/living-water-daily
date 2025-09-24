@@ -650,5 +650,5 @@ const verses = {
     ]
 };
 
-module.exports = { verses };
+export default verses;
   
